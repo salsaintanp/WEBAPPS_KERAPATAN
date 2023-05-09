@@ -14,14 +14,12 @@ with st.sidebar :
     selected = option_menu (
        menu_title='Main Menu',
        options=['Halaman Utama','Kerapatan Curah','Kerapatan Absolut','Kerapatan Relatif', 'Tabel Kerapatan Air' ] )
-
+    
 # Halaman Utama Homescreen
 
 if selected == 'Halaman Utama':
     st.markdown("<h1 style='text-align: center; color: red;'>APLIKASI PERHITUNGAN KERAPATAN</h1>", unsafe_allow_html=True)
-    st.markdown("<h5 style='text-align: center; color: black;'>(Kelompok 6-1H)</h5>", unsafe_allow_html=True)
     st.markdown('----')
-    st.markdown("<h5 style='text-align: center; color: black;'> Aplikasi yang dapat membantu anda untuk menghitung kerapatan curah, kerapatan absolut, dan kerapatan relatif. </h5>", unsafe_allow_html=True)
 
     #Menampilkan animasi pada homescreen
     
@@ -34,16 +32,16 @@ if selected == 'Halaman Utama':
     lottie_anime_json = load_lottie_url(lottie_animation_1)
     st_lottie(lottie_anime_json, key = 'hello')
     
-    #Menampilkan informasi seputar perbedaan kerapatan curah, absolut, relative
+    st.markdown("<h5 style='text-align: center; color: black;'> Aplikasi yang dapat membantu anda untuk menghitung kerapatan curah, kerapatan absolut, dan kerapatan relatif. </h5>", unsafe_allow_html=True)
     
-    st.markdown("<h5 style='text-align: center; color: red;'>APA SIH BEDANYA KERAPATAN CURAH, ABSOLUT, DAN RELATIVE ???</h5>", unsafe_allow_html=True)
+    #Menampilkan informasi seputar perbedaan kerapatan curah, absolut, relatif
     
     col1, col2, col3, = st.columns([1,2,1])
     col1.markdown(' # Kerapatan Curah')
     col1.markdown (':green[Kerapatan Curah] adalah bobot bahan padat berbentuk butiran dibagi volume curah yaitu volume bahan dalam bentuk tercurah seperti beras pada takaran .')
     col2.markdown("<h1 style='text-align: center; color:green;'>Kerapatan Absolut </h1>", unsafe_allow_html=True)
     col2.markdown(':green[Kerapatan Absolut] adalah bobot bahan dibagi volume nyata bahan. Untuk benda yang bersifat curah, volume nyata adalah volume curah dikurangi volume udara di antara butiran-butiran bahan. Volume celah-celah butiran ini bisa diketahui dengan cara menambahkan cairan (yang akan mengisi celah-celah butiran) yang tidak bereaksi (diserap, diresapatau membentuk ikatan) dengan bahan.')
-    col3.markdown(' # Kerapatan Relative ')
+    col3.markdown(' # Kerapatan Relatif ')
     col3.markdown(':green[Kerapatan Relatif] perbandingan kerapatan bahan dengan kerapatan air pada temperatur dan tekanan yang sama.')
 
 # Halaman Perhitungan Kerapatan Curah
